@@ -7,7 +7,7 @@ First clone the repository, create the Docker container, run it, and start a bas
 git clone https://github.com/FrankBuss/zephyrdocker
 cd zephyrdocker
 docker pull zephyrprojectrtos/zephyr-build:latest
-docker run -it --rm -u $(id -u):$(id -g) -v $(pwd)/workdir:/workdir -w /workdir zephyrprojectrtos/zephyr-build /bin/bash
+docker run -it --entrypoint="" --rm -u $(id -u):$(id -g) -v $(pwd)/workdir:/workdir -w /workdir zephyrprojectrtos/zephyr-build /bin/bash
 ```
 
 This mounts the workdir from the host as "/workdir" in the container, and also sets it as the current workdir.
